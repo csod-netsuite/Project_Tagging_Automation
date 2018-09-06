@@ -1,0 +1,40 @@
+<scheduledscript scriptid="customscript_csod_ss_auto_project_tag">
+  <defaultfunction>execute</defaultfunction>
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>CSOD SS Auto Project Tagging</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/CSOD_Project_Tagging/CSOD_SS_Auto_Project_Tagging.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy2">
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>NOTSCHEDULED</status>
+      <title>CSOD SS Auto Project Tagging Ad-Hoc</title>
+      <recurrence>
+        <single>
+          <repeat></repeat>
+          <startdate>2018-04-06</startdate>
+          <starttime>01:00:00Z</starttime>
+        </single>
+      </recurrence>
+    </scriptdeployment>
+    <scriptdeployment scriptid="customdeploy_ss_project_tag_sched">
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>SCHEDULED</status>
+      <title>CSOD SS Auto Project Tagging</title>
+      <recurrence>
+        <daily>
+          <enddate></enddate>
+          <everyxdays>1</everyxdays>
+          <repeat>PT1H</repeat>
+          <startdate>2018-03-30</startdate>
+          <starttime>07:00:00Z</starttime>
+        </daily>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</scheduledscript>
